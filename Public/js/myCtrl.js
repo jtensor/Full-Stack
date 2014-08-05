@@ -1,13 +1,15 @@
-angular.module('fullStack')
-	//.controller('myCtrl',['$scope', 'myService', function($scope, myService){
-	.controller('myCtrl',function($scope, myService){
+var myApp = angular.module('myApp');
+
+myApp.controller('myCtrl',['$scope', 'myService', function($scope, myService){
+	//.controller('myCtrl',function($scope, myService){
 	$scope.test = "CSS is AWEsome";
 	var famGet =function(){
 		myService.famGet().then(function(res){
+			console.log(res);
 			$scope.fam = res;
-		})
-	}
+		});
+	};
 	famGet();
-});	
-//}]);
+//});	
+}]);
 

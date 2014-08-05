@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html ng-app="fullStack" >
+<html ng-app="myApp" >
 <head>
 	 <link rel="stylesheet" type="text/css" href="Styles/style.css">
 	<title></title>
@@ -8,28 +8,31 @@
 <body ng-controller="myCtrl">
 
 <div>{{test}}</div>
-<a href='/family'>'Get Family'</a>
+<a ui-sref='/family'>'Get Family'</a>
 <input type="text" ng-model="setFamily" placeholder="add Family"><br>
 <button ng-click='friends'>'Get Friends'</button>
 <button ng-click='hobbies'>'Get Hobbies'</button>
 <button ng-click='me'>'Get My Info'</button>
 <h3>This is just the raw data:</h3>
 <div>{{fam}}</div>>
-<div ng-view></div>
+<div ui-view></div>
 
 	<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
 	 -->
-
+<scripts>
    <script src="bower_components/angular/angular.js"></script>
+   <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
 
-	<script src = "js/app.js"></script>	
-	<script src = "js/myCtrl.js"></script>
-	<script src = "js/myService.js"></script>
-	<script src = "js/myDirectives.js"></script>
+	<script src = "/js/app.js"></script>	
+
+	<script src = "/js/myCtrl.js"></script>
+	<script src = "/js/myService.js"></script>
+	<script src = "/js/myDirectives.js"></script>
 	<!-- <script src = "server.js"></script>
 	 <script src = "server-assets/myData.js"></script>-->
+</scripts>	 
 </body>
 </html>
