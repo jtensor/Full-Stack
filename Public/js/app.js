@@ -40,11 +40,11 @@ myApp.config(function($stateProvider,$urlRouterProvider){
 	.state('hobbies',{
 		url:'/hobbies',
 		templateUrl:'views/hobbyview.html',
-		controller:'myCtrl'
+		controller:'hobbyCtrl'
 	})
 	.state('me',{
 		url:'/me',
 		templateUrl:'views/meview.html',
-		controller:'myCtrl'
+		controller:'meCtrl'
 	})
 });

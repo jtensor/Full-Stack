@@ -1,13 +1,13 @@
 
 var family = [
-	{name:'Robert', age:37 , relationship:'husband'},
-	{name:'Brandon', age:13 , relationship:'son'},
-	{name:'Sean', age:11 , relationship:'son'},
-	{name:'Natalia', age:8 , relationship:'daughter'},
-	{name:'Alauna', age:6 , relationship:'daughter'},
-	{name:'Jena', age:33 , relationship:'sister'},
-	{name:'Jamie', age:35 , relationship:'self'},
-	{name:'Jared', age:38 , relationship:'brother'}
+	{name:'Robert', age:37 , relationship:'hottest husband'},
+	{name:'Brandon', age:13 , relationship:'taller than me son'},
+	{name:'Sean', age:11 , relationship:'awesome-est son'},
+	{name:'Natalia', age:8 , relationship:'bestest daughter'},
+	{name:'Alauna', age:6 , relationship:'talking-est daughter'},
+	{name:'Jena', age:33 , relationship:'closest sister'},
+	//{name:'Jamie', age:35 , relationship:'self'},
+	{name:'Jared', age:38 , relationship:'older brother'}
 ];
 module.exports.getFamily = function(){
 	return family;

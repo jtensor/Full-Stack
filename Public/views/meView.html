@@ -1,8 +1,12 @@
 <div ui-view></div>
-<h1 ui-sref = "home"> Home Page</h1>
-{{myMe}}
-<div ng-repeat="stuff in me">
-	<h2>{{stuff.name}}</h2>
-	<p>Age: {{stuff.age}}</p>
-	<p>Height: {{stuff.height}}</p>
+<button ui-sref = "home"> Home Page</button>
+
+<div>
+	<h4>My name is {{me.name}}</h4>
+	<p>I am {{me.height}} tall</p>
+	<p>I am {{me.age}} years old</p>
+	<p>My favorite movie is {{me.favoriteMovie}}</p>
+	<p>My favorite artist is the amazing {{me.favoriteArtist}}</p>
+	<p>My all-time favorite food is {{me.favoriteFood}}</p>
 </div>
+

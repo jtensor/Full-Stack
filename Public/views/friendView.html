@@ -1,8 +1,11 @@
 <div ui-view></div>
-<h1 ui-sref = "home"> Home Page</h1>
-{{friend}}
+<button ui-sref = "home"> Home Page</button>
+<input type="text" ng-model="newFriend" placeholder="new friend">
+<button ng-click="newFriend">Add</button> info to add -- {"name":"Karen", "age":37 , "met":"2 years ago"}
+<br>
+<h2>My Friends</h2>
 	<div ng-repeat="person in friend">
-	<h2>{{person.name}}</h2>
+	<h4>{{person.name}}</h4>
 	<p>Age: {{person.age}}</p>
-	<p>How we met: {{person.met}}</p>
+	<p>When we met: {{person.met}}</p>
 </div>
