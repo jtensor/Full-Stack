@@ -35,6 +35,7 @@ app.post('/family', function(req, res){
 	var setFamily = myData.setFamily(newFamily);
 	res.send(201);
 });
+
 app.get('/friends',function(req,res){
 	var myFriends = myData.getFriends();
 	res.send(myFriends);
@@ -48,6 +49,7 @@ app.post('/friends',function(req,res){
 	var setFriends = myData.setFriends(newFriends);
 	res.send(201);
 });
+
 app.get('/hobbies',function(req,res){
 	var myHobbies = myData.getHobbies();
 	res.send(myHobbies);

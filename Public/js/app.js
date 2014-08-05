@@ -23,23 +23,28 @@ myApp.config(function($stateProvider,$urlRouterProvider){
 
 	$stateProvider
 	.state('home',{
-		url:'/view',
+		url:'/',
+		templateUrl:'views/main.html',
 		controller:'myCtrl'
 	})
 	.state('family',{
-		url:'#/family',
+		url:'/family',
+		templateUrl:'views/familyview.html',
 		controller:'myCtrl'
 	})
 	.state('friends',{
 		url:'/friends',
-		controller:'myCtrl'
+		templateUrl:'views/friendview.html',
+		controller:'friendCtrl'
 	})
 	.state('hobbies',{
 		url:'/hobbies',
+		templateUrl:'views/hobbyview.html',
 		controller:'myCtrl'
 	})
 	.state('me',{
 		url:'/me',
+		templateUrl:'views/meview.html',
 		controller:'myCtrl'
 	})
 });

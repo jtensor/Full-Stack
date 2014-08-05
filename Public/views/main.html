@@ -1,6 +1,13 @@
-<div>{{test}}</div>
-<a ui-sref='/family'>'Get Family'</a>
-<!-- <button ng-click='friends'>'Get Friends'</button>
-<button ng-click='hobbies'>'Get Hobbies'</button>
-<button ng-click='me'>'Get My Info'</button> -->
-<div>{{fam}}</div>
+<div ui-view>{{test}}</div>
+<button ui-sref='family'>My Family Info</button>
+<input type="text" ng-model="newFamily" placeholder="add another family member"><br>
+
+<button ui-sref='friends'>My Friend Info</button>
+<input type="text" ng-model="newFriend" placeholder="add another friend"><br>
+
+<button ui-sref='hobbies'>My Hobbies</button>
+<input type="text" ng-model="newHobby" placeholder="add a new hobby"><br>
+
+<button ui-sref='me'>My Info</button>
+<!-- <button ui-sref='family'>My Family Info</button>
+{{fam}} -->

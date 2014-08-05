@@ -1,0 +1,8 @@
+<div ui-view></div>
+<h1 ui-sref = "home"> Home Page</h1>
+{{myMe}}
+<div ng-repeat="stuff in me">
+	<h2>{{stuff.name}}</h2>
+	<p>Age: {{stuff.age}}</p>
+	<p>Height: {{stuff.height}}</p>
+</div>

@@ -1,7 +1,7 @@
-<h5 ui-sref = "home"> Home</h5>
-<h1> My Family consists of: {{fam}}</h1>
-<div ng-repeat="fam in family">
-	<h2>{{fam.name}}</h2>
-	<h4>Age: {{fam.age}}</h4>
-	<p>Relationship: {{fam.relationship}}</p>
+<div ui-view></div>
+<h1 ui-sref = "home"> Home Page</h1>
+<div ng-repeat="person in fam">
+	<h2>{{person.name}}</h2>
+	<p>Age: {{person.age}}</p>
+	<p>Relationship to me: {{person.relationship}}</p>
 </div>
