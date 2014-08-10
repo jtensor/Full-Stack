@@ -9,7 +9,8 @@ myApp.controller('myCtrl',['$scope', 'myService', function($scope, myService){
 	famGet();
 
 	$scope.famPost = function(){
-		myService.famPost($scope.famName,$scope.famAge,$scope.relation)
+		//myService.famPost($scope.famName,$scope.famAge,$scope.relation)
+		myService.famPost($scope.newFamily)
 		// .then(function(data){
 		// 	$scope.info = data;
 		// 	//famGet();

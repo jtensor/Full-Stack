@@ -29,9 +29,9 @@ app.get('/family',function(req,res){
 });
 app.post('/family', function(req, res){
 	var newFamily = {
-		name: req.body.name,
-		age: req.body.age,
-		relationship: req.body.relationship
+		name: req.body.famName,
+		age: req.body.famAge,
+		relationship: req.body.relation
 	};
 	console.log(newFamily);
 	//var setFamily = myData.setFamily(newFamily);
