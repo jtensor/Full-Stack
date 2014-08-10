@@ -21,9 +21,10 @@ app.get('/view', function(req,res){
 })
 
 var myData = require('./server-assets/myData.js');
+var myFamily = [];
 
 app.get('/family',function(req,res){
-	var myFamily = myData.getFamily();
+	myFamily = myData.getFamily();
 	res.send(myFamily);
 });
 app.post('/family', function(req, res){
@@ -32,8 +33,10 @@ app.post('/family', function(req, res){
 		age: req.body.age,
 		relationship: req.body.relationship
 	};
-	var setFamily = myData.setFamily(newFamily);
-	res.send(201);
+	console.log(newFamily);
+	//var setFamily = myData.setFamily(newFamily);
+	myFamily.push(newFamily);
+	res.status(201).end(newFamily);
 });
 
 app.get('/friends',function(req,res){
@@ -47,7 +50,7 @@ app.post('/friends',function(req,res){
 		met:req.body.met
 	};
 	var setFriends = myData.setFriends(newFriends);
-	res.send(201);
+	res.status(201).end();
 });
 
 app.get('/hobbies',function(req,res){
@@ -59,7 +62,7 @@ app.post('/hobbies',function(req, res){
 		hobby:req.body.hobby
 	};
 	var setHobbies = myData.setHobbies(newHobbies);
-	res.send(201);
+	res.status(201).end();
 });
 app.get('/me',function(req, res){
 	var myMe = myData.getMe();
