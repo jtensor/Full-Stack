@@ -1,7 +1,9 @@
 <div ui-view></div>
 <button ui-sref = "home"> Home Page</button>
-<input type="text" ng-model="newFriend" placeholder="new friend">
-<button ng-click="newFriend">Add</button> info to add -- {"name":"Karen", "age":37 , "met":"2 years ago"}
+<input type="text" ng-model="fName" placeholder="name">
+<input type="text" ng-model="fAge" placeholder="age">
+<input type="text" ng-model="fMet" placeholder="when we met">
+<button ng-click="friendPost()" >Add</button>info to add -- {"name":"Karen C", "age":37 , "met":"2 years ago"}
 <br>
 <h2>My Friends</h2>
 	<div ng-repeat="person in friend">

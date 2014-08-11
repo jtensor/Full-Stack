@@ -9,4 +9,8 @@ myApp.controller('friendCtrl',['$scope', 'myService', function($scope, myService
 	};
 	friendGet();
 
+	$scope.friendPost = function(){
+		myService.friendPost($scope.fName,$scope.fAge,$scope.fMet)
+	};
+
 }]);

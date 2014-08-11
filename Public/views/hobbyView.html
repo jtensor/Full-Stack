@@ -1,7 +1,7 @@
 <div ui-view></div>
 <button ui-sref = "home"> Home Page</button>
-<input type="text" ng-model="newHobbies" placeholder="new hobby">
-<button ng-click="newHobbies">Add</button>info to add -- {"hobby":"more sleeping"}
+<input type="text" ng-model="newHobby" placeholder="new hobby">
+<button ng-click="hobbyPost()">Add</button>info to add -- {"hobby":"more sleeping"}
 <br>
 <h2>My Hobbies</h2>
 	<div ng-repeat="thing in hobby">

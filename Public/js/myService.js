@@ -43,7 +43,7 @@ myApp.service('myService',function($http, $q){
 		return $http({
 			method:'POST',
 			url:'http://localhost:9090/family',
-			headers : { 'Content-Type': 'application/x-www-form-urlencoded' },
+			//headers : { 'Content-Type': 'application/x-www-form-urlencoded' },
 			data:{name:famName,
 					age:famAge,
 					relationship:relation}
@@ -55,7 +55,30 @@ myApp.service('myService',function($http, $q){
 		});
 		//return deferred.promise;
 		}
+	this.friendPost = function(fName,fAge,fMet){
+		return $http({
+			method: 'POST',
+			url: 'http://localhost:9090/friends',
+			data:{name:fName,
+				age:fAge,
+				met:fMet}
+		}).success(function(){
+			console.log("friend added!");
+		}).error(function(err){
+		});
+	}	
+	this.hobbyPost = function(newHobby){
+		return $http({
+			method:'POST',
+			url: 'http://localhost:9090/hobbies',
+			data:{
+				hobby:newHobby}
+		}).success(function(){
+			console.log("hobby added!");
+		}).error(function(err){
 
+		});
+	}
 })
 
 

@@ -9,4 +9,7 @@ myApp.controller('hobbyCtrl',['$scope', 'myService', function($scope, myService)
 	};
 	hobbyGet();
 
+	$scope.hobbyPost = function(){
+		myService.hobbyPost($scope.newHobby)
+	};
 }]);

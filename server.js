@@ -29,14 +29,15 @@ app.get('/family',function(req,res){
 });
 app.post('/family', function(req, res){
 	var newFamily = {
-		name: req.body.famName,
-		age: req.body.famAge,
-		relationship: req.body.relation
+		name: req.body.name,
+		age: req.body.age,
+		relationship: req.body.relationship
 	};
-	console.log(newFamily);
-	//var setFamily = myData.setFamily(newFamily);
-	myFamily.push(newFamily);
-	res.status(201).end(newFamily);
+	//console.log(newFamily);
+	var setFamily = myData.setFamily(newFamily);
+	//myFamily.push(newFamily);
+	res.status(201).send(newFamily);
+	//myData.setFamily(newFamily);
 });
 
 app.get('/friends',function(req,res){
@@ -50,7 +51,7 @@ app.post('/friends',function(req,res){
 		met:req.body.met
 	};
 	var setFriends = myData.setFriends(newFriends);
-	res.status(201).end();
+	res.status(201).send(newFriends);
 });
 
 app.get('/hobbies',function(req,res){
@@ -58,11 +59,11 @@ app.get('/hobbies',function(req,res){
 	res.send(myHobbies);
 });
 app.post('/hobbies',function(req, res){
-	var newHobbies = {
+	var newHobby = {
 		hobby:req.body.hobby
 	};
-	var setHobbies = myData.setHobbies(newHobbies);
-	res.status(201).end();
+	var setHobbies = myData.setHobbies(newHobby);
+	res.status(201).send(newHobby);
 });
 app.get('/me',function(req, res){
 	var myMe = myData.getMe();
